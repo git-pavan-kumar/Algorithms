@@ -28,7 +28,7 @@ public class LogestSubStrWithMaxKDistinctChars {
 		int first = 0;
 		int max = 0;
 		Map<Character, Integer> hm = new HashMap<>();
-		
+
 		for(int last = 0; last < s.length(); last++) {
 			hm.compute(s.charAt(last), (key,val) -> val == null ? 1 : val+1);
 			while(hm.size() > k) {

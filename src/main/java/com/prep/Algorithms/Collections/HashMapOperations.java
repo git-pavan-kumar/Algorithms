@@ -11,7 +11,7 @@ public class HashMapOperations {
 		m.put("USA", 2);
 		m.put("Aus", 3);
 		
-		//m.compute("Aus", (k,v) -> k == null ? v-1 : m.remove(k));
+		m.compute("Aus", (k,v) -> k == null ? v-1 : m.remove(k));
 		//m.computeIfAbsent("Vietnam", k -> 4);
 		m.computeIfPresent("USA", (k,v) -> v == 0 ? m.remove(k) : v-1);
 		m.computeIfPresent("USA", (k,v) -> v == 0 ? m.remove(k) : v-1);
